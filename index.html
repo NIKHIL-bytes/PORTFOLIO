@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Nikhil Raj</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i data-lucide="shield" class="icon-logo"></i>
+                    <span>Nikhil Raj</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <button onclick="scrollToSection('accueil')" class="nav-link">Home</button>
+                    <button onclick="scrollToSection('apropos')" class="nav-link">About</button>
+                    <button onclick="scrollToSection('competences')" class="nav-link">Skills</button>
+                    <button onclick="scrollToSection('experience')" class="nav-link">Experience</button>
+                    <button onclick="scrollToSection('projets')" class="nav-link">Projects</button>
+                    <button onclick="scrollToSection('certifications')" class="nav-link">Certifications</button>
+                    <button onclick="scrollToSection('contact')" class="btn btn-primary">Contact</button>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()" id="mobileMenuBtn">
+                    <i data-lucide="menu" id="menuIcon"></i>
+                    <i data-lucide="x" id="closeIcon" style="display: none;"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav class="nav-mobile" id="mobileNav">
+                <button onclick="scrollToSection('accueil')" class="nav-link">Home</button>
+                <button onclick="scrollToSection('apropos')" class="nav-link">About</button>
+                <button onclick="scrollToSection('competences')" class="nav-link">Skills</button>
+                <button onclick="scrollToSection('experience')" class="nav-link">Experience</button>
+                <button onclick="scrollToSection('projets')" class="nav-link">Projects</button>
+                <button onclick="scrollToSection('certifications')" class="nav-link">Certifications</button>
+                <button onclick="scrollToSection('contact')" class="btn btn-primary btn-full">Contact</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="accueil" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-icons">
+                        <div class="hero-icon-box cyan">
+                            <i data-lucide="shield"></i>
+                        </div>
+                        <div class="hero-icon-box blue">
+                            <i data-lucide="network"></i>
+                        </div>
+                        <div class="hero-icon-box purple">
+                            <i data-lucide="lock"></i>
+                        </div>
+                    </div>
+
+                    <h1 class="hero-title">
+                        <span class="title-accent">Cyber Security Analyst</span>
+                        <span>Network & IT Security</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        From curiosity to creation, my cybersecurity journey is about learning, building, and defending digital systems through continuous hands-on experience.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="cv.pdf" download="Nikhil_Raj_CV.pdf" class="btn btn-primary btn-lg">Download CV</a>
+                        <!-- <button href="cv.pdf" download="Nikhil_Raj_CV.pdf" class="btn btn-primary btn-lg" download>
+                            Download CV
+                        </button> -->
+                        <button onclick="scrollToSection('contact')" class="btn btn-outline btn-lg">
+                            Contact me
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="apropos" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-divider"></div>
+
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p class="mb-6">
+                            Passionate about network technologies and cybersecurity, 
+                            I specialize in designing secure network architectures and implementing 
+                            defense-in-depth strategies.
+                        </p>
+                        <p class="mb-6">
+                            My expertise covers all aspects of IT infrastructure: 
+                            next-generation firewall configuration, VPN solution deployment, 
+                            network segmentation, intrusion detection (IDS/IPS), and security incident 
+                            management.
+                        </p>
+                        <p>
+                            Certified and constantly monitoring technological developments, I support companies 
+                            in their digital transformation while ensuring the security and 
+                            availability of their information systems.
+                        </p>
+                    </div>
+
+                    <div class="about-features">
+                        <div class="feature-card">
+                            <i data-lucide="terminal" class="feature-icon cyan"></i>
+                            <h3>Administration</h3>
+                            <p>Linux, Active Directory</p>
+                        </div>
+                        <div class="feature-card">
+                            <i data-lucide="server" class="feature-icon blue"></i>
+                            <h3>Infrastructure</h3>
+                            <p>Cisco, Palo Alto</p>
+                        </div>
+                        <div class="feature-card">
+                            <i data-lucide="code" class="feature-icon purple"></i>
+                            <h3>Scripting</h3>
+                            <p>Python, Bash, PowerShell</p>
+                        </div>
+                        <div class="feature-card">
+                            <i data-lucide="database" class="feature-icon green"></i>
+                            <h3>Virtualization</h3>
+                            <p>VMware, Docker</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="competences" class="skills">
+            <div class="container">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="section-divider"></div>
+
+                <div class="skills-grid">
+                    <!-- Networks & Infrastructure -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon-box cyan">
+                                <i data-lucide="network"></i>
+                            </div>
+                            <h3>Networks & Infrastructure</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag">Cisco (Routers, Switches, ASA)</span>
+                            <span class="tag">TCP/IP Architecture</span>
+                            <span class="tag">VLAN & Trunking</span>
+                            <span class="tag">Routing Protocols (OSPF, BGP, EIGRP)</span>
+                            <span class="tag">VPN (IPSec, SSL)</span>
+                            <span class="tag">Load Balancing</span>
+                        </div>
+                    </div>
+
+                    <!-- Security & Firewall -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon-box red">
+                                <i data-lucide="shield"></i>
+                            </div>
+                            <h3>Security & Firewall</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag">Palo Alto Networks</span>
+                            <span class="tag">WAF (Web Application Firewall)</span>
+                            <span class="tag">UTM / NGFW</span>
+                            <span class="tag">SSL/TLS Inspection</span>
+                            <span class="tag">Security Policies</span>
+                            <span class="tag">Splunk</span>
+                        </div>
+                    </div>
+
+                    <!-- Monitoring & Detection -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon-box purple">
+                                <i data-lucide="eye"></i>
+                            </div>
+                            <h3>Monitoring & Detection</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag">IDS/IPS (Snort, Suricata)</span>
+                            <span class="tag">SIEM (Splunk, ELK Stack)</span>
+                            <span class="tag">Wireshark / tcpdump</span>
+                            <span class="tag">NetFlow Analysis</span>
+                            <span class="tag">Log Management</span>
+                            <span class="tag">Threat Intelligence</span>
+                        </div>
+                    </div>
+
+                    <!-- Cybersecurity -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon-box orange">
+                                <i data-lucide="lock"></i>
+                            </div>
+                            <h3>Cybersecurity</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag">Pentest & Vulnerability Assessment</span>
+                            <span class="tag">System Hardening</span>
+                            <span class="tag">Identity Management (IAM)</span>
+                            <span class="tag">2FA / MFA</span>
+                            <span class="tag">Cryptography</span>
+                            <span class="tag">Incident Response</span>
+                            <span class="tag">Basic Forensics</span>
+                            <span class="tag">Security Audits</span>
+                            <span class="tag">Metasploit</span>
+                            <span class="tag">BurpSuit</span>
+                        </div>
+                    </div>
+
+                    <!-- Wireless & IoT -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon-box blue">
+                                <i data-lucide="wifi"></i>
+                            </div>
+                            <h3>Wireless & IoT</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag">Wi-Fi Enterprise (WPA2/WPA3)</span>
+                            <span class="tag">IoT Segmentation</span>
+                            <span class="tag">RF Troubleshooting</span>
+                        </div>
+                    </div>
+
+                    <!-- Systems & Virtualization -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon-box green">
+                                <i data-lucide="server"></i>
+                            </div>
+                            <h3>Systems & Virtualization</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag">Linux (Debian, Ubuntu)</span>
+                            <span class="tag">Active Directory / GPO</span>
+                            <span class="tag">VMware</span>
+                            <span class="tag">Docker & Kubernetes</span>
+                            <span class="tag">Backup & Recovery</span>
+                        </div>
+                    </div>
+
+                    <!-- Scripting & Automation -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon-box yellow">
+                                <i data-lucide="terminal"></i>
+                            </div>
+                            <h3>Scripting & Automation</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag">Python (Automation, Scripts)</span>
+                            <span class="tag">Bash / Shell Scripting</span>
+                            <span class="tag">PowerShell</span>
+                            <span class="tag">Ansible</span>
+                            <span class="tag">Git / Version Control</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Network Automation</span>
+                            <span class="tag">CI/CD basics</span>
+                        </div>
+                    </div>
+
+                    <!-- Services & Protocols -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon-box indigo">
+                                <i data-lucide="database"></i>
+                            </div>
+                            <h3>Services & Protocols</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag">DNS (BIND, Windows DNS)</span>
+                            <span class="tag">DHCP</span>
+                            <span class="tag">Active Directory</span>
+                            <span class="tag">Proxy (Squid)</span>
+                            <span class="tag">Mail Security (SPF, DKIM, DMARC)</span>
+                            <span class="tag">SNMP</span>
+                            <span class="tag">FTP/SFTP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="section-divider"></div>
+
+                <div class="experience-list">
+                    <!-- Experience 1 -->
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <div class="experience-info">
+                                <h3>Cyber Security Intern</h3>
+                                <div class="company-info">
+                                    <i data-lucide="briefcase"></i>
+                                    <span>Codec Technologies</span>
+                                </div>
+                                <p class="location">Vadodara, Gujarat</p>
+                            </div>
+                            <div class="period-badge">
+                                <i data-lucide="calendar"></i>
+                                <span>2025 - 2026</span>
+                            </div>
+                        </div>
+                        <div class="experience-content">
+                            <p class="description">Designed a Personal Firewall and Phishing Simulator And Detector using Python.</p>
+                            <ul class="achievements">
+                                <li><span class="bullet">▹</span>Learned about the real life aspects of Cyber Security</li>
+                                <li><span class="bullet">▹</span>The scale of demand and supply for Cyber Security</li>
+                                <li><span class="bullet">▹</span>Python/Bash Scripting for automation of many things like web scraping, etc.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projets" class="projects">
+            <div class="container">
+                <h2 class="section-title">Major Projects</h2>
+                <div class="section-divider"></div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-icon green">
+                            <i data-lucide="shield"></i>
+                        </div>
+                        <h3><a href="https://github.com/NIKHIL-bytes/CRYPTOVIZ-Cryptography-Visualization-Lab" style="color: white; text-decoration: none;">CRYPTOVIZ-Cryptography-Visualization-Lab</a></h3>
+                        <p class="project-description">
+                            CRYPTOVIZ is a modern cyber-themed educational visualization platform built to simplify the learning of cryptographic concepts through interactive simulations, real-time inputs, and mathematical walkthroughs. Instead of learning algorithms only through theory.
+                        </p>
+                        <div class="project-tech">
+                            <p class="tech-label">Technologies:</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Diffie Hellman</span>
+                                <span class="tech-tag">RSA</span>
+                                <span class="tech-tag">AES & DES</span>
+                                <span class="tech-tag">Hashing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-icon cyan">
+                            <i data-lucide="network"></i>
+                        </div>
+                        <h3><a href="https://github.com/NIKHIL-bytes/personal-firewall" style="color: white; text-decoration: none;">Personal Firewall</a></h3>
+                        <p class="project-description">
+                            This project is a basic personal firewall built as a learning exercise in cybersecurity and networking.It monitors active network connections and applies simple allow/deny rules based on IP addresses and ports.The goal is to understand how firewalls conceptually work rather than replace system-level firewalls.
+                        </p>
+                        <div class="project-tech">
+                            <p class="tech-label">Technologies:</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Firewall</span>
+                                <span class="tech-tag">ACL</span>
+                                <span class="tech-tag">DMZ</span>
+                                <span class="tech-tag">VPN</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <div class="project-icon purple">
+                            <i data-lucide="activity"></i>
+                        </div>
+                        <h3><a href="https://github.com/NIKHIL-bytes/cli-log-analyzer" style="color: white; text-decoration: none;">Cli Log Analyzer</a></h3>
+                        <p class="project-description">
+                            CLI Log Analyzer is a small Python project created to practice working with command line tools and log files.It reads a log file, highlights different log levels using colors, and shows a basic summary.The goal of the project was to improve understanding of file handling, modular code, and CLI-based programs.
+                        </p>
+                        <div class="project-tech">
+                            <p class="tech-label">Technologies:</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Splunk</span>
+                                <span class="tech-tag">ELK Stack</span>
+                                <span class="tech-tag">Python</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card">
+                        <div class="project-icon blue">
+                            <i data-lucide="server"></i>
+                        </div>
+                        <h3><a href="https://github.com/NIKHIL-bytes/simple-file-encryption" style="color: white; text-decoration: none;">Simple File Encryption Tool</a></h3>
+                        <p class="project-description">
+                            This project is a basic command line file encryption tool written in Python.It allows users to encrypt and decrypt files using a password.The goal of this project was to understand basic cryptographic concepts and file handling.
+                        </p>
+                        <div class="project-tech">
+                            <p class="tech-label">Technologies:</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Fernet</span>
+                                <span class="tech-tag">Hashing</span>
+                                <span class="tech-tag">RSA</span>
+                                <span class="tech-tag">Cryptosystem</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card">
+                        <div class="project-icon red">
+                            <i data-lucide="shield"></i>
+                        </div>
+                        <h3><a href="https://github.com/NIKHIL-bytes/phishing-simulation-detection" style="color: white; text-decoration: none;">Phishing Attack Simulation and Detection</a></h3>
+                        <p class="project-description">
+                            This project is an educational simulation designed to demonstrate how phishing attacks work and how basic detection mechanisms can identify suspicious emails.The project focuses on awareness and detection rather than real-world exploitation.
+                        </p>
+                        <div class="project-tech">
+                            <p class="tech-label">Technologies:</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">HTTP & HTTPS</span>
+                                <span class="tech-tag">Keyword Filtering</span>
+                                <span class="tech-tag">Audit</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card">
+                        <div class="project-icon yellow">
+                            <i data-lucide="network"></i>
+                        </div>
+                        <h3><a href="https://github.com/NIKHIL-bytes/Password-generator-and-checker" style="color: white; text-decoration: none;">Password Generator and Checker</a></h3>
+                        <p class="project-description">
+                            This is a simple Python command line tool that allows users to check the strength of a password or generate a strong random password.The project was built to practice CLI arguments, basic validation, and random password generation.
+                        </p>
+                        <div class="project-tech">
+                            <p class="tech-label">Technologies:</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python Scripting</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications">
+            <div class="container">
+                <h2 class="section-title">Certifications</h2>
+                <div class="section-divider"></div>
+
+                <div class="certifications-grid">
+                    <!-- Certification 1 -->
+                    <div class="cert-card">
+                        <div class="cert-content">
+                            <i data-lucide="award" class="cert-icon cyan"></i>
+                            <div class="cert-info">
+                                <h3>Smart India Hackthon</h3>
+                                <p class="cert-issuer">Parul University</p>
+                                <div class="cert-badges">
+                                    <span class="cert-year">2025</span>
+                                </div>
+                            </div>
+                            <i data-lucide="check-circle-2" class="cert-check"></i>
+                        </div>
+                    </div>
+
+                    <!-- Certification 2 -->
+                    <div class="cert-card">
+                        <div class="cert-content">
+                            <i data-lucide="award" class="cert-icon green"></i>
+                            <div class="cert-info">
+                                <h3>Cyber Security 101 & Web Fundamental</h3>
+                                <p class="cert-issuer">TryHackMe</p>
+                                <div class="cert-badges">
+                                    <span class="cert-year">2025</span>
+                                </div>
+                            </div>
+                            <i data-lucide="check-circle-2" class="cert-check"></i>
+                        </div>
+                    </div>
+
+                    <!-- Certification 3 -->
+                    <div class="cert-card">
+                        <div class="cert-content">
+                            <i data-lucide="award" class="cert-icon purple"></i>
+                            <div class="cert-info">
+                                <h3>Ejptv2</h3>
+                                <p class="cert-issuer">Udemy</p>
+                                <div class="cert-badges">
+                                    <span class="cert-year">2025</span>
+                                </div>
+                            </div>
+                            <i data-lucide="check-circle-2" class="cert-check"></i>
+                        </div>
+                    </div>
+
+                    <!-- Certification 4 -->
+                    <div class="cert-card">
+                        <div class="cert-content">
+                            <i data-lucide="award" class="cert-icon orange"></i>
+                            <div class="cert-info">
+                                <h3>Network Security & Cyber Security Fundamentals </h3>
+                                <p class="cert-issuer">Palo Alto Networks</p>
+                                <div class="cert-badges">
+                                    <span class="cert-year">2026</span>
+                                </div>
+                            </div>
+                            <i data-lucide="check-circle-2" class="cert-check"></i>
+                        </div>
+                    </div>
+
+                    <!-- Certification 5 -->
+                    <div class="cert-card">
+                        <div class="cert-content">
+                            <i data-lucide="award" class="cert-icon blue"></i>
+                            <div class="cert-info">
+                                <h3>Jr. Pentester</h3>
+                                <p class="cert-issuer">TryHackMe</p>
+                                <div class="cert-badges">
+                                    <span class="cert-year">2023</span>
+                                </div>
+                            </div>
+                            <i data-lucide="check-circle-2" class="cert-check"></i>
+                        </div>
+                    </div>
+
+                    <!-- Certification 6 -->
+                    <div class="cert-card">
+                        <div class="cert-content">
+                            <i data-lucide="award" class="cert-icon red"></i>
+                            <div class="cert-info">
+                                <h3>Certified Red Team Operations Management (CRTOM)</h3>
+                                <p class="cert-issuer">Red Team Leaders</p>
+                                <div class="cert-badges">
+                                    <span class="cert-year">2025</span>
+                                </div>
+                            </div>
+                            <i data-lucide="check-circle-2" class="cert-check"></i>
+                        </div>
+                    </div>
+
+                    <!-- Certification 7 -->
+                    <div class="cert-card">
+                        <div class="cert-content">
+                            <i data-lucide="award" class="cert-icon yellow"></i>
+                            <div class="cert-info">
+                                <h3>Cyber Security Job Simulation (Deloitte, Tata, mastercard)</h3>
+                                <p class="cert-issuer">Forage</p>
+                                <div class="cert-badges">
+                                    <span class="cert-year">2025</span>
+                                </div>
+                            </div>
+                            <i data-lucide="check-circle-2" class="cert-check"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Continuing Education Box -->
+                <div class="formation-box">
+                    <i data-lucide="award" class="formation-icon"></i>
+                    <div>
+                        <h3>Continuing Education</h3>
+                        <p>
+                            Constantly training to stay up to date with the latest technologies and security practices. 
+                            Regular participation in conferences (SSTIC, Black Hat, DEF CON) and daily technology monitoring along with my Btech.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <div class="section-divider"></div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Let's Talk</h3>
+                        <p class="contact-intro">
+                            Feel free to contact me if you would like to discuss ideas, collaborate, or need help with projects in this field.
+                        </p>
+
+                        <div class="contact-cards">
+                            <div class="info-card">
+                                <div class="info-icon-box">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <div>
+                                    <p class="info-label">Email</p>
+                                    <a href="mailto:nikhil.official10001111@gmail.com" class="info-link">nikhil.official10001111@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="info-card">
+                                <div class="info-icon-box">
+                                    <i data-lucide="phone"></i>
+                                </div>
+                                <div>
+                                    <p class="info-label">Phone</p>
+                                    <a href="tel:+916204891670" class="info-link">+91 62048 91670</a>
+                                </div>
+                            </div>
+
+                            <div class="info-card">
+                                <div class="info-icon-box">
+                                    <i data-lucide="map-pin"></i>
+                                </div>
+                                <div>
+                                    <p class="info-label">Location</p>
+                                    <p class="info-text">Vadodara, Gujarat, India</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                                <i class="bi bi-github"></i>
+                            </a>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Portfolio - Network & Security Technician. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Toast notification container -->
+    <div id="toast" class="toast"></div>
+
+   <script src="script.js"></script>
+    <script>
+        // Initialize lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
